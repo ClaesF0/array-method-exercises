@@ -38,6 +38,10 @@ const users = [
   },
 ];
 
-const filteredUsers = null; // Replace null and add .filter code here
+const filteredUsers = users.filter((users) => {
+  if (users.isAdmin===true&&users.isVerified===true){
+    return true;
+  }
+});
 
 console.log(filteredUsers);

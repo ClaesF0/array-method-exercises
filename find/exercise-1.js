@@ -13,6 +13,18 @@ set the result of this to the supplied 'foundIndex' variable.
 const values = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 // Find the value of 5:
-const foundIndex = null; // Replace null and add .map code here
+const foundIndex = values.find((soughtIndex, index) => {
+    
+    if (index === 5) {
+        return true;
+    } 
+    console.log("The value of 5 has index of: ", index);
+}); 
 
+const valuesTimesOne = values.reduce((total, value)=> {
+    total += value; 
+    return total;
+}, 0);
+
+const valuesTimesTwo = (valuesTimesOne*2)
 console.log(valuesTimesTwo);
